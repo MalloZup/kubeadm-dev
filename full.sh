@@ -8,4 +8,4 @@ export KUBEADM_PLAYGROUND_SPEC=$kubeadm_dir
 $kubeadm_playground start
 
 # deploy development k8s binary of kubeadm
-$kubeadm_playground deploy --binary ~/go/src/github.com/kubernetes/kubernetes_output/bin/kubeadm
+$kubeadm_playground deploy --binary ~/go/src/github.com/kubernetes/kubernetes/_output/bin/kubeadm

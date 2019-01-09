@@ -13,7 +13,8 @@ spec:
          kind: "VagrantMachineSet"
          # box: "kubeadm-playground/ubuntu-xenial64"
          # box: "kubeadm-playground/ubuntu-xenial64-docker-18-06"
-         box: "kubeadm-playground/ubuntu-bionic64"
+         #box: "kubeadm-playground/ubuntu-bionic64"
+         box: "ubuntu/xenial64"
          cpus: 2
          memory: 2048
      roles:

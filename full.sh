@@ -3,7 +3,7 @@
 kubeadm_playground="$GOPATH/src/k8s.io/kubeadm/vagrant/kubeadm-playground"
 
 # Deploy in multi-cluster setup
-export KUBEADM_PLAYGROUND_SPEC="$PWD"
+export KUBEADM_PLAYGROUND_SPEC="$GOPATH/src/k8s.io/kubeadm/vagrant/spec"
 
 $kubeadm_playground start
 

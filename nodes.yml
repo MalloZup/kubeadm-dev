@@ -1,18 +1,18 @@
 apiVersion: cluster.k8s.io/v1alpha1
 kind: MachineSet
-metadata:
+metadata: 
   name: node
-spec:
+spec: 
   replicas: 1
-  template:
-    metadata:
-    spec:
-      providerConfig:
-        value:
-          apiVersion: kubeadm.playground/v1alpha1
-          kind: KubeadmPlaygroundMachineSet
+  template: 
+    metadata: 
+    spec: 
+      providerConfig: 
+        value: 
+          apiVersion: vagrantproviderconfig/v1alpha1
+          kind: VagrantProviderConfig
           box: "ubuntu/xenial64"
           cpus: 2
           memory: 2048
-      roles:
+      roles: 
         - Node

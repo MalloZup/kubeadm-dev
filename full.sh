@@ -1,10 +1,10 @@
 #! /bin/bash
 
-kubeadm_dir="/home/dmaiocchi/bin/kubeadm-dev"
 kubeadm_playground="$GOPATH/src/k8s.io/kubeadm/vagrant/kubeadm-playground"
 
 # Deploy in multi-cluster setup
-export KUBEADM_PLAYGROUND_SPEC=$kubeadm_dir
+export KUBEADM_PLAYGROUND_SPEC="$PWD"
+
 $kubeadm_playground start
 
 # deploy development k8s binary of kubeadm

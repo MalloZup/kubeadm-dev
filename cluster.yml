@@ -1,13 +1,18 @@
 apiVersion: cluster.k8s.io/v1alpha1
 kind: Cluster
 metadata:
-  name: kubeadm-test
+ name: kubeadm-playground
 spec:
-  providerConfig: 
-    value: 
-      apiVersion: vagrantCluster/v1alpha1
-      kind: vagrantCluster
-      kubernetes:
-        version: 1.10.2
-        cni:
-          plugin: weavenet
+ providerConfig:
+   value:
+     apiVersion: kubeadm.playground.k8s.io/v1alpha1
+     kind: KubeadmPlaygroundCluster
+     kubernetes:
+       #version: 1.12.2
+       #version: 1.13.0-rc.1
+       version: 1.13.1
+       #dnsAddon: kubeDNS
+       #certificateAuthority: external
+       #cri: containerd
+     #kubeadm:
+       #apiVersion: v1alpha3

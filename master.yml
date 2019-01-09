@@ -1,18 +1,21 @@
 apiVersion: cluster.k8s.io/v1alpha1
 kind: MachineSet
 metadata:
-  name: master
+ name: master
 spec:
-  replicas: 1
-  template:
-    metadata:
-    spec:
-      providerConfig:
-        value:
-          apiVersion: kubeadm.playground/v1alpha1
-          kind: KubeadmPlaygroundMachineSet
-          box: "ubuntu/xenial64"
-          cpus: 2
-          memory: 2048
-      roles:
-        - Master
+ replicas: 1
+ template:
+   metadata:
+   spec:
+     providerConfig:
+       value:
+         apiVersion: kubeadm.playground.k8s.io/v1alpha1
+         kind: VagrantMachineSet
+         # box: "kubeadm-playground/ubuntu-xenial64"
+         # box: "kubeadm-playground/ubuntu-xenial64-docker-18-06"
+         box: "kubeadm-playground/ubuntu-bionic64"
+         cpus: 2
+         memory: 2048
+     roles:
+       - Master
+       - Etcd
